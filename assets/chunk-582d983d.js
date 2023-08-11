@@ -1,0 +1,1 @@
+import{d as a}from"./chunk-7ce51f58.js";let r;const t=async()=>{const e=window.location.href;r=await a(e),chrome.storage.local.set({[e]:r}),await chrome.runtime.sendMessage({hasThread:r})};t();chrome.runtime.onMessage.addListener(e=>{e.run&&t()});

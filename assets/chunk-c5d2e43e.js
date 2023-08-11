@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((e,a,d)=>{const s=e.hasThread?"img/logo-badge-16.png":"img/logo-48.png";chrome.action.setIcon({path:s}),d({message:e.hasThread?"badged":"unbadged"})});chrome.tabs.onActivated.addListener(e=>{chrome.tabs.get(e.tabId,async a=>{!a.id||await chrome.tabs.sendMessage(a.id,{run:!0})})});
